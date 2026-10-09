@@ -1,0 +1,43 @@
+html:
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <div id="card">
+    <div>
+        <h1>CheckOut de Compras</h1>
+    </div>
+    <div id="inputs">
+        <label for="">Preço do Produto (R$)</label>
+        <input type="text" placeholder="Ex:100,00" id="preco">
+        <label for="">Valor do Frete (R$)</label>
+        <input type="text" placeholder="Ex:15,00" id="frete">
+    </div>
+    <div>
+        <h3>Forma de Pagamento:</h3>
+    </div>
+    <div id="botoes">
+       
+        <div  id="botao1">
+            <input type="submit" value="PIX(-10%)" id="b1" onclick=pagarComPix()>
+            <input type="submit" value="Dinheiro(-5%)" id="b2" onclick="pagamento('Dinheiro')">
+        </div>
+        <div id="botao2">
+            <input type="submit" value="Cartão à Vista" id="b3" onclick="pagamento('Cartao')">
+            <input type="submit" value="Parcelado(+5%)" id="b4" onclick="pagamento('Parcelado')">
+        </div>
+    </div>
+    <div>
+        <p id="forma">Forma:</p>
+        <p id="resultado">Total:</p>
+    </div>
+   
+   </div>
+   <script src="index.js"></script>
+</body>
+</html>
